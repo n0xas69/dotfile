@@ -9,6 +9,7 @@
   inactive_color_offset = 0.61
   suppress_multiple_term_dialog = True
 [keybindings]
+  new_tab = <Primary>t
   go_up = <Alt>k
   go_down = <Alt>j
   go_left = <Alt>h
@@ -17,11 +18,13 @@
   split_vert = <Shift><Alt>Right
   copy = <Primary><Shift>c
   paste = <Primary><Shift>v
+  next_tab = <Primary>Page_Down
   layout_launcher = F12
 [profiles]
   [[default]]
     background_color = "#2e3440"
     cursor_color = "#D8DEE9"
+    font = Ubuntu 8
     foreground_color = "#d8dee9"
     scrollback_infinite = True
     palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
@@ -33,11 +36,54 @@
     palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
     use_system_font = False
 [layouts]
-  [[default]]
+  [[kek]]
     [[[child1]]]
       parent = window0
       type = Terminal
+      profile = default
     [[[window0]]]
       parent = ""
       type = Window
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 1920, 1052
+      title = romain@romain-pro:~
+      last_active_term = 1bbc691b-fb16-4d28-9f43-e03a82351069
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 958
+      ratio = 0.5002610966057441
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 1bbc691b-fb16-4d28-9f43-e03a82351069
+    [[[child3]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 524
+      ratio = 0.5004775549188156
+    [[[terminal4]]]
+      type = Terminal
+      parent = child3
+      order = 0
+      profile = default
+      uuid = 5ef5dfdf-d3c0-4c13-ba29-2ec181bc1602
+    [[[terminal5]]]
+      type = Terminal
+      parent = child3
+      order = 1
+      profile = default
+      uuid = a465bcb6-7ce3-463b-9970-a95e9be1aabd
 [plugins]
