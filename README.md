@@ -1,2 +1,3 @@
-Theme de bureau et de dock : tokyonight dark BL
+Theme de bureau et de plank : tokyonight dark BL
+
 theme d'icone : kora
