@@ -21,6 +21,8 @@ install_app() {
   else
     echo "os not supported by script"
   fi
+
+  flatpak install flathub io.neovim.nvim
 }
 
 install_app
