@@ -8,7 +8,7 @@
 #exec 2>/dev/null
 
 install_app() {
-  pkg_list="git tmux npm firefox htop flatpak fish ripgrep gcc python3 python3-pip"
+  pkg_list="git tmux npm htop flatpak fish ripgrep gcc python3 python3-pip"
 
   if [[ $(cat /etc/*-release) == *"debian"* || $(cat /etc/*-release) == *"ubuntu"* ]]; then
     echo "os debian or ubuntu like"
