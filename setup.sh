@@ -13,7 +13,7 @@ install_app() {
   if [[ $(cat /etc/*-release) == *"debian"* || $(cat /etc/*-release) == *"ubuntu"* ]]; then
     echo "os debian or ubuntu like"
     sudo apt update && sudo apt upgrade
-    sudo apt install -y "$pkg_list"
+    sudo apt install -y $pkg_list
   else
     echo "os not supported by script"
     exit 1
