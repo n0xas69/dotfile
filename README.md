@@ -1,16 +1,17 @@
-### theme bureau et dock (plank) : 
-tokyonight dark BL
+### Setup script
+
+Launch setup.sh for install and configure :
+- neovim IDE
+- kitty terminal
+- starship shell custom
+- fish shell
+- zellij multiplexer
+- rustup
 
 
-### Pour les icônes :
+### Icons :
 theme : kora
 
-### Tmux
-https://github.com/tmux-plugins/tpm
-
-
-### police terminal :
+### Fonts :
 JetBrains mono 10
 
-### neovim
-j'utilise astronvim, config perso sur le repos gitlab
