@@ -8,7 +8,7 @@
 #exec 2>/dev/null
 
 install_app() {
-  pkg_list="curl git tmux npm htop fish ripgrep gcc python3 python3-pip"
+  pkg_list="curl git tmux npm htop fish ripgrep gcc python3 python3-pip python3-venv"
 
   if [[ $(cat /etc/*-release) == *"debian"* || $(cat /etc/*-release) == *"ubuntu"* ]]; then
     echo "os debian or ubuntu like"
@@ -40,6 +40,7 @@ install_app() {
   tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz -C $HOME
   chmod +x $HOME/zellij
   sudo mv $HOME/zellij /usr/local/bin/
+  rm $HOME/zellij-x86_64-unknown-linux-musl.tar.gz
 
 }
 
@@ -53,6 +54,7 @@ configure() {
 
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $HOME
   unzip $HOME/JetBrainsMono.zip -d $HOME/.fonts
+  rm $HOME/JetBrainsMono.zip
 
   cd $HOME
   git clone git@github.com:n0xas69/dotfile.git
