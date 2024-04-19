@@ -29,7 +29,7 @@ install_app() {
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   sudo ln -s $HOME/.local/kitty.app/bin/kitty /usr/local/bin/kitty
 
-  # install starhip
+  # install starship
   curl -sS https://starship.rs/install.sh | sh
 
   # install rust toolchain
