@@ -58,7 +58,7 @@ configure() {
   git clone git@github.com:n0xas69/dotfile.git
   rm -rf ~/.config/nvim
   rm -rf ~/.local/share/nvim
-  git clone https://github.com/NvChad/starter ~/.config/nvim
+  git clone -b v2.0 https://github.com/NvChad/NvChad.git ~/.config/nvim
   mkdir $HOME/.config/nvim/lua/custom
   git clone https://github.com/n0xas69/nvchad_config.git ~/.config/nvim/lua/custom
 
