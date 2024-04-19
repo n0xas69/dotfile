@@ -48,7 +48,7 @@ configure() {
   rm -rf ~/.local/share/nvim
   git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
   mkdir $HOME/.config/nvim/lua/custom
-  git clone git@github.com:n0xas69/nvchad_config.git ~/.config/nvim/lua/custom
+  git clone https://github.com/n0xas69/nvchad_config.git ~/.config/nvim/lua/custom
 
   cp $HOME/dotfile/.config/fish/config.fish $HOME/.config/fish/config.fish
   cp $HOME/dotfile/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
