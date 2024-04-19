@@ -60,9 +60,8 @@ configure() {
   git clone git@github.com:n0xas69/dotfile.git
   rm -rf ~/.config/nvim
   rm -rf ~/.local/share/nvim
-  git clone -b v2.0 https://github.com/NvChad/NvChad.git ~/.config/nvim
-  mkdir $HOME/.config/nvim/lua/custom
-  git clone https://github.com/n0xas69/nvchad_config.git ~/.config/nvim/lua/custom
+  mkdir $HOME/.config/nvim
+  git clone https://github.com/n0xas69/nvim_config.git ~/.config/nvim/
 
   cp $HOME/dotfile/.config/fish/config.fish $HOME/.config/fish/config.fish
   cp $HOME/dotfile/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
