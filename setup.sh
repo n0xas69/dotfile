@@ -24,8 +24,8 @@ install_app() {
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   curl -sS https://starship.rs/install.sh | sh
   curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
-  wget https://github.com/zellij-org/zellij/releases/download/v0.40.0/zellij-x86_64-unknown-linux-musl.tar.gz $HOME
-  tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz
+  wget https://github.com/zellij-org/zellij/releases/download/v0.40.0/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
+  tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz -C $HOME
   chmod +x $HOME/zellij
   sudo mv $HOME/zellij /usr/local/bin/
 
@@ -39,7 +39,7 @@ configure() {
   mkdir $HOME/.config/zellij
   chsh -s $(which fish)
 
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip $HOME
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $HOME
   unzip $HOME/JetBrainsMono.zip -d $HOME/.fonts
 
   cd $HOME
