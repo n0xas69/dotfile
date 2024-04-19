@@ -3,5 +3,5 @@ if status is-interactive
   alias vim="nvim"
   set -x GOPATH /usr/local/go/bin
   set -U fish_user_paths $fish_user_paths $GOPATH
-    # Commands to run in interactive sessions can go here
+  eval (zellij setup --generate-auto-start fish | string collect)
 end
