@@ -19,6 +19,7 @@ install_app() {
     exit 1
   fi
 
+  sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   flatpak install flathub io.neovim.nvim
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   curl -sS https://starship.rs/install.sh | sh
