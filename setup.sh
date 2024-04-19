@@ -8,7 +8,7 @@
 #exec 2>/dev/null
 
 install_app() {
-  pkg_list="curl git tmux npm htop flatpak fish ripgrep gcc python3 python3-pip"
+  pkg_list="curl git tmux npm htop fish ripgrep gcc python3 python3-pip"
 
   if [[ $(cat /etc/*-release) == *"debian"* || $(cat /etc/*-release) == *"ubuntu"* ]]; then
     echo "os debian or ubuntu like"
@@ -19,12 +19,24 @@ install_app() {
     exit 1
   fi
 
-  sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  flatpak install -y flathub io.neovim.nvim
+
+  # install neovim
+  wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -P $HOME
+  chmod u+x $HOME/nvim.appimage
+  sudo mv $HOME/nvim.appimage /usr/local/bin/nvim
+
+  # install kitty
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+  sudo ln -s $HOME/.local/kitty.app/bin/kitty /usr/local/bin/kitty
+
+  # install starhip
   curl -sS https://starship.rs/install.sh | sh
+
+  # install rust toolchain
   curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
-  wget https://github.com/zellij-org/zellij/releases/download/v0.40.0/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
+
+  # install zellij
+  wget https://github.com/zellij-org/zellij/releases/download/latest/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
   tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz -C $HOME
   chmod +x $HOME/zellij
   sudo mv $HOME/zellij /usr/local/bin/
@@ -42,7 +54,7 @@ configure() {
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $HOME
   unzip $HOME/JetBrainsMono.zip -d $HOME/.fonts
 
-  cd $HOME
+  cd $HOMEhttps://github.com/n0xas69/nvchad_config.git
   git clone git@github.com:n0xas69/dotfile.git
   rm -rf ~/.config/nvim
   rm -rf ~/.local/share/nvim
