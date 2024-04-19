@@ -24,7 +24,11 @@ install_app() {
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   curl -sS https://starship.rs/install.sh | sh
   curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
-  cargo install --locked zellij
+  wget https://github.com/zellij-org/zellij/releases/download/v0.40.0/zellij-x86_64-unknown-linux-musl.tar.gz $HOME
+  tar -xvf $HOME/zellij*.tar.gz
+  chmod +x $HOME/zellij
+  sudo mv $HOME/zellij /usr/local/bin/
+
 }
 
 configure() {
@@ -33,7 +37,6 @@ configure() {
   mkdir $HOME/.config
   mkdir $HOME/.config/fish
   mkdir $HOME/.config/zellij
-
   chsh -s $(which fish)
 
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip $HOME
