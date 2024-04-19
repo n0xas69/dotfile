@@ -25,7 +25,7 @@ install_app() {
   curl -sS https://starship.rs/install.sh | sh
   curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
   wget https://github.com/zellij-org/zellij/releases/download/v0.40.0/zellij-x86_64-unknown-linux-musl.tar.gz $HOME
-  tar -xvf $HOME/zellij*.tar.gz
+  tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz
   chmod +x $HOME/zellij
   sudo mv $HOME/zellij /usr/local/bin/
 
