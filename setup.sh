@@ -36,7 +36,7 @@ install_app() {
   curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 
   # install zellij
-  wget https://github.com/zellij-org/zellij/releases/download/latest/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
+  wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
   tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz -C $HOME
   chmod +x $HOME/zellij
   sudo mv $HOME/zellij /usr/local/bin/
