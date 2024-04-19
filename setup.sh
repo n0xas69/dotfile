@@ -23,7 +23,7 @@ install_app() {
   flatpak install -y flathub io.neovim.nvim
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   curl -sS https://starship.rs/install.sh | sh
-  curl https://sh.rustup.rs -sSf | sh
+  curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
   cargo install --locked zellij
 }
 
