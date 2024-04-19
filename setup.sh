@@ -54,7 +54,7 @@ configure() {
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $HOME
   unzip $HOME/JetBrainsMono.zip -d $HOME/.fonts
 
-  cd $HOMEhttps://github.com/n0xas69/nvchad_config.git
+  cd $HOME
   git clone git@github.com:n0xas69/dotfile.git
   rm -rf ~/.config/nvim
   rm -rf ~/.local/share/nvim
