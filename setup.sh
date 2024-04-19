@@ -54,7 +54,7 @@ configure() {
 }
 
 if [[ $1 == "config" ]]; then
-  install_app
   configure
 fi
 install_app
+configure
