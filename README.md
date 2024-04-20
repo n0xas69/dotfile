@@ -1,6 +1,6 @@
 ### Setup script
 
-**Work only on debian like OS**
+**Work only on debian base OS**
 
 Launch setup.sh for install and configure :
 - neovim IDE : https://nvchad.com/
