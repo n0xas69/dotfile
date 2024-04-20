@@ -1,5 +1,7 @@
 ### Setup script
 
+**Work only on debian like OS**
+
 Launch setup.sh for install and configure :
 - neovim IDE : https://nvchad.com/
 - kitty terminal : https://sw.kovidgoyal.net/kitty/
