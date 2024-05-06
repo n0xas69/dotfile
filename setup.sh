@@ -8,7 +8,7 @@
 #exec 2>/dev/null
 
 install_app() {
-  pkg_list="curl git tmux npm htop fish ripgrep gcc wget unzip python3 python3-pip python3-venv"
+  pkg_list="curl git tmux npm htop fish ripgrep gcc wget unzip python3 python3-pip python3-venv fzf"
 
   if [[ $(cat /etc/*-release) == *"debian"* || $(cat /etc/*-release) == *"ubuntu"* ]]; then
     echo "os debian or ubuntu like"
