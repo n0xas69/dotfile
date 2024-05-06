@@ -36,11 +36,11 @@ install_app() {
   curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
 
   # install zellij
-  wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
-  tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz -C $HOME
-  chmod +x $HOME/zellij
-  sudo mv $HOME/zellij /usr/local/bin/
-  rm $HOME/zellij-x86_64-unknown-linux-musl.tar.gz
+  # wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
+  # tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz -C $HOME
+  # chmod +x $HOME/zellij
+  # sudo mv $HOME/zellij /usr/local/bin/
+  # rm $HOME/zellij-x86_64-unknown-linux-musl.tar.gz
 
   # install lazygit
   LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -56,7 +56,8 @@ configure() {
   mkdir $HOME/.fonts
   mkdir $HOME/.config
   mkdir $HOME/.config/fish
-  mkdir $HOME/.config/zellij
+  mkdir $HOME/.local/bin
+  #mkdir $HOME/.config/zellij
   chsh -s $(which fish)
 
   wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $HOME
@@ -73,7 +74,10 @@ configure() {
   cp $HOME/dotfile/.config/fish/config.fish $HOME/.config/fish/config.fish
   cp $HOME/dotfile/.config/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
   cp $HOME/dotfile/.config/starship.toml $HOME/.config/starship.toml
-  cp $HOME/dotfile/.config/zellij/config.kdl $HOME/.config/zellij/config.kdl
+  cp $HOME/dotfile/.tmux.conf $HOME/.tmux.conf
+  cp $HOME/dotfile/scripts/tmux_fzf.sh $HOME/.local/bin/tmux_fzf.sh
+  chmod +x $HOME/.local/bin/tmux_fzf.sh
+  #cp $HOME/dotfile/.config/zellij/config.kdl $HOME/.config/zellij/config.kdl
 
 }
 
