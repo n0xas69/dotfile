@@ -7,7 +7,7 @@ Launch setup.sh for install and configure :
 - kitty terminal : https://sw.kovidgoyal.net/kitty/
 - starship prompt : https://starship.rs/
 - fish shell : https://fishshell.com/
-- zellij multiplexer : https://zellij.dev/
+- tmux multiplexer : https://github.com/tmux/tmux
 - rustup
 
 if neovim pop error "dlopen(): error loading libfuse.so.2":
