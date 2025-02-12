@@ -3,7 +3,7 @@
 **Work only on debian base OS**
 
 Launch setup.sh for install and configure :
-- neovim
+- neovim with my config : https://github.com/n0xas69/nvim_config/tree/main
 - kitty terminal : https://sw.kovidgoyal.net/kitty/
 - starship prompt : https://starship.rs/
 - fish shell : https://fishshell.com/
