@@ -32,16 +32,6 @@ install_app() {
   # install starship
   curl -sS https://starship.rs/install.sh | sh
 
-  # install rust toolchain
-  curl https://sh.rustup.rs -sSf | bash -s -- -y --no-modify-path
-
-  # install zellij
-  # wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz -P $HOME
-  # tar -xvf $HOME/zellij-x86_64-unknown-linux-musl.tar.gz -C $HOME
-  # chmod +x $HOME/zellij
-  # sudo mv $HOME/zellij /usr/local/bin/
-  # rm $HOME/zellij-x86_64-unknown-linux-musl.tar.gz
-
   # install lazygit
   LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
   curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
@@ -60,7 +50,7 @@ configure() {
   #mkdir $HOME/.config/zellij
   chsh -s $(which fish)
 
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $HOME
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip -P $HOME
   unzip $HOME/JetBrainsMono.zip -d $HOME/.fonts
   rm $HOME/JetBrainsMono.zip
 
@@ -77,8 +67,6 @@ configure() {
   cp $HOME/dotfile/.tmux.conf $HOME/.tmux.conf
   cp $HOME/dotfile/scripts/tmux_fzf.sh $HOME/.local/bin/tmux_fzf.sh
   chmod +x $HOME/.local/bin/tmux_fzf.sh
-  #cp $HOME/dotfile/.config/zellij/config.kdl $HOME/.config/zellij/config.kdl
-
 }
 
 if [[ $1 == "config" ]]; then
