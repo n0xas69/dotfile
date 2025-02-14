@@ -8,7 +8,7 @@
 #exec 2>/dev/null
 
 install_app() {
-  pkg_list="curl git tmux npm htop fish ripgrep gcc wget unzip python3 python3-pip python3-venv fzf"
+  pkg_list="curl git tmux htop fish ripgrep gcc wget unzip python3 python3-pip python3-venv fzf"
 
   if [[ $(cat /etc/*-release) == *"debian"* || $(cat /etc/*-release) == *"ubuntu"* ]]; then
     echo "os debian or ubuntu like"
@@ -19,6 +19,10 @@ install_app() {
     exit 1
   fi
 
+  # install nodejs
+  curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh
+  sudo -E bash nodesource_setup.sh
+  sudo apt-get install -y nodejs npm
 
   # install neovim
   wget https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -P $HOME
